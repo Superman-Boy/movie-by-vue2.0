@@ -16,6 +16,16 @@
   }
 }
 
+.rd-col-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &:before,
+  &:after {
+    display: flex;
+  }
+}
+
 .flex-start {
   justify-content: flex-start;
 }

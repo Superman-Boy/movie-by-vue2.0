@@ -10,11 +10,6 @@ export default {
   data () {
     return {
     }
-  },
-  mounted () {
-    this.$nextTick(() => {
-      console.log(123123)
-    })
   }
 }
 </script>

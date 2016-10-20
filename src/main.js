@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import router from './router'
+import store from './store/index'
 // import App from './App.vue'
 import './assets/js/adaptor'
-import 'whatwg-fetch'
 
 /* eslint-disable no-new */
 new Vue({
-  router
+  router,
+  store
 }).$mount('#app')
 // fetch('http://127.0.0.1:3000/api')
 //   .then(response => response.json())

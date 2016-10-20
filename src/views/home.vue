@@ -25,7 +25,8 @@ export default {
 @import '../assets/css/index';
 .home-container {
   box-sizing: border-box;
-  padding: 42px 30px 0 30px;
+  padding: 42px 15px 0 15px;
   background: #f2f2f2;
+  overflow: auto;
 }
 </style>

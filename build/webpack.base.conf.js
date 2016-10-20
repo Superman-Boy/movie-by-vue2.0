@@ -95,7 +95,8 @@ module.exports = {
         rootValue: 40,
         propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'width', 'height',
         'padding', 'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
-        'margin', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right']
+        'margin', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
+        'max-width', 'max-height', 'min-width', 'min-height']
       })
     ]
   }
