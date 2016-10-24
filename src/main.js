@@ -9,14 +9,3 @@ new Vue({
   router,
   store
 }).$mount('#app')
-// fetch('http://127.0.0.1:3000/api')
-//   .then(response => response.json())
-//   .then((data) => {
-//     console.log(data)
-//   })
-/* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   template: '<App/>',
-//   components: { App }
-// })

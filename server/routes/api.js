@@ -1,7 +1,8 @@
 let router = require('koa-router')();
-let article = require('../api/index.js');
+let api = require('../api/index.js');
 
-router.get('/', article.articleList)
-  .get('/in_theaters', article.inTheaters)
+router.get('/', api.articleList)
+  .get('/in_theaters', api.inTheaters)
+  .get('/detail/:id', api.getDetail)
 
 module.exports = router;
