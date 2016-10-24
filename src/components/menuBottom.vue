@@ -16,10 +16,10 @@ export default {
   data () {
     return {
       menus: [
-        {name: '热映', icon: 'ion-ios-bookmarks'},
-        {name: '票房榜', icon: 'ion-ios-film'},
-        {name: 'TOP250', icon: 'ion-ios-videocam'},
-        {name: 'TOP250', icon: 'ion-closed-captioning'},
+        {name: '正在热映', icon: 'ion-ios-bookmarks'},
+        {name: '即将上映', icon: 'ion-ios-film'},
+        {name: '口碑榜', icon: 'ion-ios-videocam'},
+        {name: '北美票房榜', icon: 'ion-closed-captioning'},
         {name: 'TOP250', icon: 'ion-videocamera'}
       ]
     }
