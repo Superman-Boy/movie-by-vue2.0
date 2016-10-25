@@ -13,6 +13,12 @@ export const getDetail = (ctx, opts) => {
   })
 }
 
+export const getComming = (ctx, opts) => {
+  api.getComming().then((response) => {
+    ctx.commit(types.GET_COMMING, response.body)
+  })
+}
+
 export const showLoading = (ctx) => {
   ctx.commit(types.TOOGLE_LOADING, true)
 }

@@ -9,6 +9,7 @@ Vue.use(Vuex)
 let state = {
   inTheaters: [],
   detail: {},
+  comming: {},
   showLoading: false
 }
 
@@ -21,6 +22,9 @@ let mutations = {
   },
   [types.TOOGLE_LOADING] (state, statue) {
     state.showLoading = statue
+  },
+  [types.GET_COMMING] (state, comming) {
+    state.comming = comming
   }
 }
 

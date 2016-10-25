@@ -7,8 +7,8 @@
         <div class="item-score rd-row-flex">
           <stars :score="this.value.rating ? +this.value.rating.stars : 0"></stars>
           <span class="item-score-text">{{value.rating.average}}</span></div>
-        <span class="item-director">导演：{{value.director}}</span>
-        <span class="item-actor">主演：{{value.actor}}</span>
+        <span class="item-director">导演：{{value.directors | mergeName}}</span>
+        <span class="item-actor">主演：{{value.casts | mergeName}}</span>
       </div>
     </router-link>
   </div>
@@ -28,6 +28,19 @@ export default {
       required: true
     }
   },
+  // filters: {
+  //   mergeName (names) {
+  //     let name = ''
+  //     names.forEach((item, index) => {
+  //       if (index < names.length - 1) {
+  //         name += item.name + '/'
+  //       } else {
+  //         name += item.name
+  //       }
+  //     })
+  //     return name
+  //   }
+  // },
   components: {
     'stars': stars
   },

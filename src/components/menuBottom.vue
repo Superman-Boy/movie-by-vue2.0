@@ -1,11 +1,14 @@
 <template>
   <div class="menu-container">
     <ul class="menu-tab-list rd-row-flex">
-      <li v-for="item in menus" class="menu-tab-item rd-col-flex flex-middle">
-        <i class="item-icon"
-          :class="item.icon"
-        ></i>
-        <span class="item-desc-text">{{item.name}}</span>
+      <li v-for="item in menus"
+        class="menu-tab-item">
+        <router-link :to="{name: item.link}" class="rd-col-flex flex-middle">
+          <i class="item-icon"
+            :class="item.icon"
+          ></i>
+          <span class="item-desc-text">{{item.name}}</span>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -16,11 +19,11 @@ export default {
   data () {
     return {
       menus: [
-        {name: '正在热映', icon: 'ion-ios-bookmarks'},
-        {name: '即将上映', icon: 'ion-ios-film'},
-        {name: '口碑榜', icon: 'ion-ios-videocam'},
-        {name: '北美票房榜', icon: 'ion-closed-captioning'},
-        {name: 'TOP250', icon: 'ion-videocamera'}
+        {name: '正在热映', icon: 'ion-ios-bookmarks', link: 'home'},
+        {name: '即将上映', icon: 'ion-ios-film', link: 'comming-soon'},
+        {name: '口碑榜', icon: 'ion-ios-videocam', link: ''},
+        {name: '北美票房榜', icon: 'ion-closed-captioning', link: ''},
+        {name: 'TOP250', icon: 'ion-videocamera', link: ''}
       ]
     }
   }

@@ -19,7 +19,7 @@ const comming = async (ctx, next) => {
 }
 
 module.exports = {
-  articleList,
   inTheaters,
-  getDetail
+  getDetail,
+  comming
 }
