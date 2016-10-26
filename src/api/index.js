@@ -11,7 +11,8 @@ Vue.http.interceptors.push((request, next) => {
   })
 })
 
-let baseUrl = 'http://127.0.0.1:3000/api'
+// let baseUrl = 'http://23.88.229.24:3001/api'
+let baseUrl = 'http://127.0.0.1:3001/api'
 
 let apiResource = Vue.resource(baseUrl + '{/id}')
 let detailResource = Vue.resource(baseUrl + '/detail{/id}')

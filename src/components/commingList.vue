@@ -37,10 +37,10 @@ export default {
   methods: {
     ...mapActions(['getComming', 'updateComing']),
     evtLoadNext () {
-      const $window = $(window)
-      $window.off('scroll')
-      $window.on('scroll', () => {
-        let scrollHeight = $window.scrollTop() + $(window).height()
+      const $app = $('#app')
+      $app.off('scroll')
+      $app.on('scroll', () => {
+        let scrollHeight = $app.scrollTop() + $(window).height()
         let contentHeight = $('.home-container').outerHeight()
         if (scrollHeight + 1 >= contentHeight) {
           if (this.commingList.length <= this.comming.total) {

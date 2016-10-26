@@ -17,9 +17,9 @@
           </div>
         </div>
         <div class="movie-part-score rd-col-flex flex-start flex-middle">
-          <span class="movie-score">{{detail.rating ? detail.rating.average : 0}}</span>
+          <div class="movie-score">{{detail.rating ? detail.rating.average : 0}}</div>
           <stars :score="detail.rating ? +detail.rating.stars : 0"></stars>
-          <span class="movie-rating-count">{{detail.ratings_count}}人</span>
+          <div class="movie-rating-count">{{detail.ratings_count}}人</div>
         </div>
       </div>
       <div class="movie-summary">
@@ -27,7 +27,6 @@
         <p class="movie-summary-text">
           {{detail.summary}}
         </p>
-        <!-- <span class="movie-summary-btn">展开</span> -->
       </div>
     </div>
   </div>
@@ -124,8 +123,8 @@ export default {
 }
 
 .movie-part-score {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   padding: 5px;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
