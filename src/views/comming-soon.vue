@@ -2,7 +2,7 @@
   <div class="home-container full-page">
     <nav-top :showPrev="false" :title="'即将上映'"></nav-top>
     <comming-list></comming-list>
-    <nemu-bottom></nemu-bottom>
+    <nemu-bottom :activeLink="'comming-soon'"></nemu-bottom>
     <loading></loading>
   </div>
 </template>
@@ -13,7 +13,7 @@ import menuBottom from '../components/menuBottom'
 import commingList from '../components/commingList'
 import loading from '../components/loading'
 export default {
-  name: 'home',
+  name: 'comming-soon',
   components: {
     'nav-top': navTop,
     'comming-list': commingList,

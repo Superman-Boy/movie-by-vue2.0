@@ -22,7 +22,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '豆瓣电影'
     },
     showPrev: {
       type: Boolean,

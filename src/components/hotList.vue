@@ -31,7 +31,9 @@ export default {
     ...mapActions(['getInTheaters'])
   },
   created () {
-    this.getInTheaters()
+    if (!this.inTheaters) {
+      this.getInTheaters()
+    }
   }
 }
 </script>

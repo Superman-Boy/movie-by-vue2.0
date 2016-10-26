@@ -2,30 +2,37 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-import Home from './views/home.vue'
-import CommingSoon from './views/comming-soon.vue'
-import Subject from './views/subject.vue'
-import App from './App.vue'
+import home from './views/home.vue'
+import commingSoon from './views/comming-soon.vue'
+import weekly from './views/weekly.vue'
+import top from './views/top.vue'
+import subject from './views/subject.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: home
   },
   {
     path: '/comming-soon',
     name: 'comming-soon',
-    component: CommingSoon
+    component: commingSoon
+  },
+  {
+    path: '/weekly',
+    name: 'weekly',
+    component: weekly
+  },
+  {
+    path: '/top',
+    name: 'top',
+    component: top
   },
   {
     path: '/subject/:id',
     name: 'subject',
-    component: Subject
-  },
-  {
-    path: '/app',
-    component: App
+    component: subject
   }
 ]
 

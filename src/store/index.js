@@ -7,9 +7,10 @@ import * as types from './mutation-types'
 Vue.use(Vuex)
 
 let state = {
-  inTheaters: [],
+  inTheaters: '',
   detail: {},
-  comming: {},
+  comming: '',
+  top: '',
   showLoading: false
 }
 
@@ -25,6 +26,12 @@ let mutations = {
   },
   [types.GET_COMMING] (state, comming) {
     state.comming = comming
+  },
+  [types.GET_WEEKLY] (state, weekly) {
+    state.weekly = weekly
+  },
+  [types.GET_TOP] (state, top) {
+    state.top = top
   }
 }
 

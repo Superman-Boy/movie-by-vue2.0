@@ -27,8 +27,8 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  color: #fff;
-  background: #009dd7;
+  color: #009dd7;
+  background: #f0f0f0;
   .loading-img {
     display: block;
     margin: 200px auto 50px;

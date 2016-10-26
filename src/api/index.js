@@ -22,6 +22,12 @@ export default {
   getComming: () => {
     return apiResource.get({id: 'comming'})
   },
+  getWeekly: () => {
+    return apiResource.get({id: 'weekly'})
+  },
+  getTop: () => {
+    return apiResource.get({id: 'top250'})
+  },
   getDetail: (opts = {}) => {
     return detailResource.get(opts)
   }

@@ -19,6 +19,18 @@ export const getComming = (ctx, opts) => {
   })
 }
 
+export const getWeekly = (ctx, opts) => {
+  api.getWeekly().then((response) => {
+    ctx.commit(types.GET_WEEKLY, response.body)
+  })
+}
+
+export const getTop = (ctx, opts) => {
+  api.getTop().then((response) => {
+    ctx.commit(types.GET_TOP, response.body)
+  })
+}
+
 export const showLoading = (ctx) => {
   ctx.commit(types.TOOGLE_LOADING, true)
 }

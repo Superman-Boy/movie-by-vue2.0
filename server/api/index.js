@@ -18,8 +18,22 @@ const comming = async (ctx, next) => {
   ctx.body = response.data
 }
 
+const weekly = async (ctx, next) => {
+  let response = await axios.get(config.weekly)
+  console.log(response)
+  // ctx.body = response.data
+  ctx.body = '123123'
+}
+
+const top250 = async (ctx, next) => {
+  let response = await axios.get(config.top250)
+  ctx.body = response.data
+}
+
 module.exports = {
   inTheaters,
   getDetail,
-  comming
+  comming,
+  weekly,
+  top250
 }

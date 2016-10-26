@@ -1,8 +1,8 @@
 <template>
   <div class="home-container full-page">
-    <nav-top :showPrev="false" :title="'正在热映'"></nav-top>
-    <hot-list></hot-list>
-    <nemu-bottom :activeLink="'home'"></nemu-bottom>
+    <nav-top :showPrev="false" :title="'TOP250'"></nav-top>
+    <top-list></top-list>
+    <nemu-bottom :activeLink="'top'"></nemu-bottom>
     <loading></loading>
   </div>
 </template>
@@ -10,13 +10,13 @@
 <script>
 import navTop from '../components/navTop'
 import menuBottom from '../components/menuBottom'
-import hotList from '../components/hotList'
+import topList from '../components/topList'
 import loading from '../components/loading'
 export default {
-  name: 'home',
+  name: 'top',
   components: {
     'nav-top': navTop,
-    'hot-list': hotList,
+    'top-list': topList,
     'nemu-bottom': menuBottom,
     'loading': loading
   }

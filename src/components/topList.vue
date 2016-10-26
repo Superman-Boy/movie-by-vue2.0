@@ -1,10 +1,10 @@
 <template>
   <div class="hot-container">
     <h2 class="hot-title-text">
-      即将上映</h2>
+      TOP250</h2>
     <ul class="hot-movie-list">
         <li class="hot-movie-item"
-          v-for="(value, key) in comming.subjects">
+          v-for="(value, key) in top.subjects">
           <hot-item :value="value"></hot-item>
         </li>
     </ul>
@@ -21,18 +21,18 @@ export default {
   },
   computed: {
     ...mapGetters({
-      comming: 'comming'
+      top: 'top'
     })
   },
   components: {
     'hot-item': hotItem
   },
   methods: {
-    ...mapActions(['getComming'])
+    ...mapActions(['getTop'])
   },
   created () {
-    if (!this.comming) {
-      this.getComming()
+    if (!this.top) {
+      this.getTop()
     }
   }
 }

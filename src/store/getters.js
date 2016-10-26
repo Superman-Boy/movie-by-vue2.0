@@ -31,4 +31,6 @@ export const detail = state => {
 }
 
 export const comming = state => state.comming
+export const weekly = state => state.weekly
+export const top = state => state.top
 export const showLoading = state => state.showLoading
