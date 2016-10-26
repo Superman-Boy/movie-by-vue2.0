@@ -3,6 +3,7 @@ const config = require('./config')
 
 const inTheaters = async (ctx, next) => {
   let querystring = ctx.request.querystring
+  console.log(config.top250 + '?' + querystring)
   let response = await axios.get(config.inTheaters)
   ctx.body = response.data
 }
@@ -16,6 +17,7 @@ const getDetail = async (ctx, next) => {
 
 const comming = async (ctx, next) => {
   let querystring = ctx.request.querystring
+  console.log(config.top250 + '?' + querystring)
   let response = await axios.get(config.comming + '?' + querystring)
   ctx.body = response.data
 }

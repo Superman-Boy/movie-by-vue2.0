@@ -1,6 +1,6 @@
 <template>
   <div class="movie-wrap">
-    <nav-top :title="detail.title"></nav-top>
+    <nav-top :title="title"></nav-top>
     <div class="movie-image-wrap">
       <div class="movie-image">
         <img :src="detail.images ? detail.images.large : ''" class="movie-header-image" alt="" />
@@ -12,8 +12,8 @@
           <h3 class="movie-title-text">{{detail.title}}</h3>
           <div class="movie-desc rd-col-flex">
             <span class="movie-genres">{{genres}}</span>
-            <span class="movie-director">导演：{{detail.director}}</span>
-            <span class="movie-actor">主演：{{detail.actor}}</span>
+            <span class="movie-director">导演：{{detail.directors | mergeName}}</span>
+            <span class="movie-actor">主演：{{detail.casts | mergeName}}</span>
           </div>
         </div>
         <div class="movie-part-score rd-col-flex flex-start flex-middle">
@@ -41,6 +41,14 @@ export default {
   name: 'movieDetail',
   data () {
     return {
+      title: '豆瓣电影'
+    }
+  },
+  watch: {
+    detail (newVal) {
+      if (newVal) {
+        this.title = newVal.title
+      }
     }
   },
   computed: {

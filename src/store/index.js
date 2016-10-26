@@ -37,7 +37,6 @@ let mutations = {
     state.commingList = comming.subjects
   },
   [types.UPDATE_COMMING] (state, comming) {
-    console.log(state.commingList.length, comming.subjects.length)
     state.comming = comming
     state.commingList = state.commingList.concat(comming.subjects)
   },

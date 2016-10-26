@@ -8,17 +8,20 @@
           <hot-item :value="value"></hot-item>
         </li>
     </ul>
+    <warn :showWarn="showWarn"></warn>
   </div>
 </template>
 
 <script>
 import hotItem from './hotItem.vue'
+import warn from './warn.vue'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
     return {
       start: 0,
-      count: 20
+      count: 20,
+      showWarn: false
     }
   },
   computed: {
@@ -28,36 +31,39 @@ export default {
     })
   },
   components: {
-    'hot-item': hotItem
+    'hot-item': hotItem,
+    'warn': warn
   },
   methods: {
     ...mapActions(['getInTheaters', 'updateInTheaters']),
     evtLoadNext () {
       const $window = $(window)
+      $window.off('scroll')
       $window.on('scroll', () => {
         let scrollHeight = $window.scrollTop() + $(window).height()
-        let conetentHeight = $('.home-container').outerHeight()
-        if (scrollHeight + 1 >= conetentHeight && this.inTheatersList.length <= this.inTheaters.total) {
-          this.start++
-          this.updateInTheaters({
-            start: this.start,
-            count: this.count
-          })
-          console.log('end==========end')
+        let contentHeight = $('.home-container').outerHeight()
+        if (scrollHeight + 1 >= contentHeight) {
+          if (this.inTheatersList.length <= this.inTheaters.total) {
+            this.start++
+            this.updateInTheaters({
+              start: this.start,
+              count: this.count
+            })
+          } else {
+            this.showWarn = true
+          }
         }
       })
     }
   },
   created () {
+    this.evtLoadNext()
     if (!this.inTheaters) {
       this.getInTheaters({
         start: this.start,
         count: this.count
       })
     }
-    this.$nextTick(() => {
-      this.evtLoadNext()
-    })
   }
 }
 </script>

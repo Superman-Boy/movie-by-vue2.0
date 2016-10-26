@@ -3,7 +3,7 @@
     <router-link :to="{name: 'subject', params: {id: value.id}}" class="hot-movie-link rd-row-flex">
       <img :src="value.images.medium" alt="" class="item-image"/>
       <div class="item-content rd-col-flex">
-        <h3 class="item-title-line">{{value.original_title}}</h3>
+        <h3 class="item-title-line">{{value.title}}</h3>
         <div class="item-score rd-row-flex">
           <stars :score="this.value.rating ? +this.value.rating.stars : 0"></stars>
           <span class="item-score-text">{{value.rating.average}}</span></div>

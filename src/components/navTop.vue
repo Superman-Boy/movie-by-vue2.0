@@ -13,10 +13,6 @@ export default {
   name: 'navTop',
   data () {
     return {
-      titles: {
-        'home': '正在热映',
-        'comming-soon': '即将上映'
-      }
     }
   },
   props: {
@@ -33,14 +29,6 @@ export default {
     goPrev () {
       window.history.go(-1)
     }
-  },
-  created () {
-    // let name = this.$route.name
-    // this.title = this.titles[name]
-    // if (this.titleProp) {
-    //   this.title = this.titleProp
-    // }
-    // console.log(name)
   }
 }
 </script>
