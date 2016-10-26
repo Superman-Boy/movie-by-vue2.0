@@ -28,19 +28,6 @@ export default {
       required: true
     }
   },
-  // filters: {
-  //   mergeName (names) {
-  //     let name = ''
-  //     names.forEach((item, index) => {
-  //       if (index < names.length - 1) {
-  //         name += item.name + '/'
-  //       } else {
-  //         name += item.name
-  //       }
-  //     })
-  //     return name
-  //   }
-  // },
   components: {
     'stars': stars
   },

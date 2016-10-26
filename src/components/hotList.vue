@@ -57,7 +57,9 @@ export default {
     }
   },
   created () {
-    this.evtLoadNext()
+    this.$nextTick(() => {
+      this.evtLoadNext()
+    })
     if (!this.inTheaters) {
       this.getInTheaters({
         start: this.start,

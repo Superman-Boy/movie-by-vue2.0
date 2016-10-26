@@ -57,7 +57,9 @@ export default {
     }
   },
   created () {
-    this.evtLoadNext()
+    this.$nextTick(() => {
+      this.evtLoadNext()
+    })
     if (!this.top) {
       this.getTop()
     }
