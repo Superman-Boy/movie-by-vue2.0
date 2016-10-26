@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container full-page">
+  <div class="home-container">
     <nav-top :showPrev="false" :title="'即将上映'"></nav-top>
     <comming-list></comming-list>
     <nemu-bottom :activeLink="'comming-soon'"></nemu-bottom>

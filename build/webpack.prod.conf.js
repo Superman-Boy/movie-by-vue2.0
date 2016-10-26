@@ -6,6 +6,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var jquery = require('jquery')
 var env = config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
@@ -25,6 +26,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     })
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery'
+    }),
     // http://vuejs.github.io/vue-loader/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container full-page">
+  <div class="home-container">
     <nav-top :showPrev="false" :title="'TOP250'"></nav-top>
     <top-list></top-list>
     <nemu-bottom :activeLink="'top'"></nemu-bottom>

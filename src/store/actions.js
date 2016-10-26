@@ -2,8 +2,14 @@ import api from '../api/index'
 import * as types from './mutation-types'
 
 export const getInTheaters = (ctx, opts) => {
-  api.getInTheaters().then((response) => {
+  api.getInTheaters(opts).then((response) => {
     ctx.commit(types.GET_IN_THEATERS, response.body)
+  })
+}
+
+export const updateInTheaters = (ctx, opts) => {
+  api.getInTheaters(opts).then((response) => {
+    ctx.commit(types.UPDATE_IN_THEATERS, response.body)
   })
 }
 
@@ -14,8 +20,14 @@ export const getDetail = (ctx, opts) => {
 }
 
 export const getComming = (ctx, opts) => {
-  api.getComming().then((response) => {
+  api.getComming(opts).then((response) => {
     ctx.commit(types.GET_COMMING, response.body)
+  })
+}
+
+export const updateComing = (ctx, opts) => {
+  api.getComming(opts).then((response) => {
+    ctx.commit(types.UPDATE_COMMING, response.body)
   })
 }
 
@@ -28,6 +40,12 @@ export const getWeekly = (ctx, opts) => {
 export const getTop = (ctx, opts) => {
   api.getTop().then((response) => {
     ctx.commit(types.GET_TOP, response.body)
+  })
+}
+
+export const updateTop = (ctx, opts) => {
+  api.getTop(opts).then((response) => {
+    ctx.commit(types.UPDATE_TOP, response.body)
   })
 }
 

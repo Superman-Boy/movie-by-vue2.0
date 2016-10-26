@@ -1,4 +1,5 @@
-export const inTheaters = state => state.inTheaters.subjects
+export const inTheaters = state => state.inTheaters
+export const inTheatersList = state => state.inTheatersList
 
 export const detail = state => {
   if (state.detail) {
@@ -31,6 +32,8 @@ export const detail = state => {
 }
 
 export const comming = state => state.comming
+export const commingList = state => state.commingList
 export const weekly = state => state.weekly
 export const top = state => state.top
+export const topList = state => state.topList
 export const showLoading = state => state.showLoading

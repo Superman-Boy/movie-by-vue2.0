@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container full-page">
+  <div class="home-container">
     <nav-top :showPrev="false" :title="'正在热映'"></nav-top>
     <hot-list></hot-list>
     <nemu-bottom :activeLink="'home'"></nemu-bottom>

@@ -2,6 +2,7 @@ const axios = require('axios')
 const config = require('./config')
 
 const inTheaters = async (ctx, next) => {
+  let querystring = ctx.request.querystring
   let response = await axios.get(config.inTheaters)
   ctx.body = response.data
 }
@@ -14,19 +15,15 @@ const getDetail = async (ctx, next) => {
 }
 
 const comming = async (ctx, next) => {
-  let response = await axios.get(config.comming)
+  let querystring = ctx.request.querystring
+  let response = await axios.get(config.comming + '?' + querystring)
   ctx.body = response.data
 }
 
-const weekly = async (ctx, next) => {
-  let response = await axios.get(config.weekly)
-  console.log(response)
-  // ctx.body = response.data
-  ctx.body = '123123'
-}
-
 const top250 = async (ctx, next) => {
-  let response = await axios.get(config.top250)
+  let querystring = ctx.request.querystring
+  console.log(config.top250 + '?' + querystring)
+  let response = await axios.get(config.top250 + '?' + querystring)
   ctx.body = response.data
 }
 
@@ -34,6 +31,5 @@ module.exports = {
   inTheaters,
   getDetail,
   comming,
-  weekly,
   top250
 }

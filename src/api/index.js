@@ -16,19 +16,19 @@ let baseUrl = 'http://127.0.0.1:3000/api'
 let apiResource = Vue.resource(baseUrl + '{/id}')
 let detailResource = Vue.resource(baseUrl + '/detail{/id}')
 export default {
-  getInTheaters: () => {
-    return apiResource.get({id: 'in_theaters'})
+  getInTheaters: (opts) => {
+    return apiResource.get({id: 'in_theaters', ...opts})
   },
-  getComming: () => {
-    return apiResource.get({id: 'comming'})
+  getComming: (opts) => {
+    return apiResource.get({id: 'comming', ...opts})
   },
   getWeekly: () => {
     return apiResource.get({id: 'weekly'})
   },
-  getTop: () => {
-    return apiResource.get({id: 'top250'})
+  getTop: (opts) => {
+    return apiResource.get({id: 'top250', ...opts})
   },
-  getDetail: (opts = {}) => {
+  getDetail: (opts) => {
     return detailResource.get(opts)
   }
 }
