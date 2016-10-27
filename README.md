@@ -31,6 +31,9 @@ npm run dev
 npm run build
 ```
 
+## 效果
+![gif](https://github.com/wendaosanshou/movie-by-vue2.0/blob/master/source/GIF-movie.gif)
+
 ## 说明
 因豆瓣api目前已经停止维护，而且对origin做了限制，客户端不能够直接通过ajax请求豆瓣的接口api!
 
