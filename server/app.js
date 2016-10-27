@@ -41,6 +41,7 @@ app.use(router.routes(), router.allowedMethods());
 app.on('error', function(err, ctx){
   console.log(err)
   logger.error('server error', err, ctx);
+  ctx.body = '服务器开小差了，请稍后再试！'
 });
 
 

@@ -2,8 +2,10 @@
 
 > 使用vue2.0 + vuex2.0 + vue-router2.0 + koa2.0做的一个简单电影webapp
 
-<!-- ## 线上访问地址
-[http://vue.fecss.com/movie/#/](http://vue.fecss.com/movie/#/) -->
+## 线上访问地址
+[http://vue.fecss.com/movie/#/](http://vue.fecss.com/movie/#/)
+
+注意：豆瓣的接口api请求非常慢而且可能会出现服务器异常情况，会导致线上demo一直处于正在加载页面，暂时未解决！
 
 ## 运行步骤
 
