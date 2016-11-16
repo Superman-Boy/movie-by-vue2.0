@@ -1,5 +1,5 @@
 <template>
-  <header class="nav-top">
+  <header class="nav-top" :style="styles">
     <i class="icon-return ion-chevron-left"
       v-show="showPrev"
       @click="goPrev"
@@ -13,6 +13,7 @@ export default {
   name: 'navTop',
   data () {
     return {
+      styles: [{background: '#fff', color: '#ccc'}, {'font-size': '18px'}]
     }
   },
   props: {
