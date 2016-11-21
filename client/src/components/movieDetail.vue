@@ -1,6 +1,6 @@
 <template>
   <div class="movie-wrap">
-    <nav-top :title="title"></nav-top>
+    <NavTop :title="title"></NavTop>
     <div class="movie-image-wrap">
       <div class="movie-image">
         <img :src="detail.images ? detail.images.large : ''" class="movie-header-image" alt="" />
@@ -18,7 +18,7 @@
         </div>
         <div class="movie-part-score rd-col-flex flex-start flex-middle">
           <div class="movie-score">{{detail.rating ? detail.rating.average : 0}}</div>
-          <stars :score="detail.rating ? +detail.rating.stars : 0"></stars>
+          <Stars :score="detail.rating ? +detail.rating.stars : 0"></Stars>
           <div class="movie-rating-count">{{detail.ratings_count}}人</div>
         </div>
       </div>
@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import navTop from './navTop'
-import stars from './stars'
+import NavTop from './NavTop'
+import Stars from './Stars'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'movieDetail',
@@ -85,8 +85,8 @@ export default {
     this.getMovieDetail()
   },
   components: {
-    stars,
-    'nav-top': navTop
+    Stars,
+    NavTop
   }
 }
 </script>

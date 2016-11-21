@@ -1,5 +1,5 @@
 <template>
-  <header class="nav-top" :style="styles">
+  <header class="nav-top">
     <i class="icon-return ion-chevron-left"
       v-show="showPrev"
       @click="goPrev"

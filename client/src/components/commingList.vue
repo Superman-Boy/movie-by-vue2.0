@@ -5,16 +5,16 @@
     <ul class="hot-movie-list">
         <li class="hot-movie-item"
           v-for="(value, key) in commingList">
-          <hot-item :value="value"></hot-item>
+          <HotItem :value="value"></HotItem>
         </li>
     </ul>
-    <warn :showWarn="showWarn"></warn>
+    <Warn :showWarn="showWarn"></Warn>
   </div>
 </template>
 
 <script>
-import hotItem from './hotItem.vue'
-import warn from './warn.vue'
+import HotItem from './HotItem.vue'
+import Warn from './Warn.vue'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
@@ -31,8 +31,8 @@ export default {
     })
   },
   components: {
-    'hot-item': hotItem,
-    'warn': warn
+    HotItem,
+    Warn
   },
   methods: {
     ...mapActions(['getComming', 'updateComing']),

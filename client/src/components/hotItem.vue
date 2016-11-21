@@ -5,7 +5,7 @@
       <div class="item-content rd-col-flex">
         <h3 class="item-title-line">{{value.title}}</h3>
         <div class="item-score rd-row-flex">
-          <stars :score="this.value.rating ? +this.value.rating.stars : 0"></stars>
+          <Stars :score="this.value.rating ? +this.value.rating.stars : 0"></Stars>
           <span class="item-score-text">{{value.rating.average}}</span></div>
         <span class="item-director">导演：{{value.directors | mergeName}}</span>
         <span class="item-actor">主演：{{value.casts | mergeName}}</span>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import stars from './stars.vue'
+import Stars from './Stars.vue'
 export default {
   name: 'hot-movie-item',
   data () {
@@ -29,7 +29,7 @@ export default {
     }
   },
   components: {
-    'stars': stars
+    Stars
   },
   computed: {
     stars () {

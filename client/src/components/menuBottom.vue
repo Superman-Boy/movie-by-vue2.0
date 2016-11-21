@@ -22,8 +22,6 @@ export default {
       menus: [
         {name: '正在热映', icon: 'ion-ios-bookmarks', link: 'home'},
         {name: '即将上映', icon: 'ion-ios-film', link: 'comming-soon'},
-        // {name: '口碑榜', icon: 'ion-ios-videocam', link: 'weekly'},
-        // {name: '北美票房榜', icon: 'ion-closed-captioning', link: ''},
         {name: 'TOP250', icon: 'ion-videocamera', link: 'top'}
       ]
     }

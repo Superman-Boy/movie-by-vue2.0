@@ -2,10 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-import Home from './views/home.vue'
-import CommingSoon from './views/comming-soon.vue'
-import Top from './views/top.vue'
-import Subject from './views/subject.vue'
+import Home from './views/Home.vue'
+import CommingSoon from './views/CommingSoon.vue'
+import Top from './views/Top.vue'
+import Subject from './views/Subject.vue'
 
 const routes = [
   {
